@@ -1,5 +1,5 @@
 [package]
-name = "pda_parser"
+name = "parser-pda"
 version = "0.1.0"
 authors = ["Yury <yury.yukhananov@tutanota.com>"]
 edition = "2018"
