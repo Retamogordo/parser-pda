@@ -44,9 +44,9 @@ pub enum SegmentTypes {
 }
 
 pub struct ParsedSegment {
-    pub(crate) tp: SegmentTypes,
-    pub(crate) seg: (usize, usize),
-    pub(crate) rank: usize,
+    pub tp: SegmentTypes,
+    pub seg: (usize, usize),
+    pub rank: usize,
 }
 
 impl std::cmp::PartialEq for ParsedSegment {
