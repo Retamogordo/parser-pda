@@ -22,8 +22,8 @@ impl PartialEq<PDAStackCtx> for SegmentDelimSyms {
 }  
 
 pub struct PDAStackCtx {
-    pub(crate) sym: SegmentDelimSyms,
-    pub(crate) seg_start: usize,
+    pub sym: SegmentDelimSyms,
+    pub seg_start: usize,
 }
 
 impl PartialEq for PDAStackCtx {
@@ -72,11 +72,11 @@ impl Ord for ParsedSegment {
 }
     
 pub struct ParserCtx {
-    pub(crate) segments: BinaryHeap<ParsedSegment>,
-    pub(crate) index: usize,
+    pub segments: BinaryHeap<ParsedSegment>,
+    pub index: usize,
 }
 
-pub(crate) fn fsm_code_to_file(fname: &str, path: &str, gen_code: &str) {
+pub fn fsm_code_to_file(fname: &str, path: &str, gen_code: &str) {
 
     let _res = create_dir(path);
 
