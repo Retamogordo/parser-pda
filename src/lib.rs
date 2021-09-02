@@ -1,11 +1,28 @@
 #[macro_use]
 extern crate fi_night;
 
-mod defs;
-mod parser_pda;
-mod parser_nondet_pda;
+pub mod defs;
+pub mod parser_pda;
+pub mod parser_nondet_pda;
 
 use crate::defs::{ ParserCtx, fsm_code_to_file };
+
+pub fn create_parser_pda_instance() -> crate::parser_pda::LittleParser {
+    crate::parser_pda::LittleParser::new(
+        crate::parser_pda::LittleParserStates::Idle, 
+        ParserCtx {
+            segments: std::collections::BinaryHeap::new(),
+            index: 0,
+    })
+}
+pub fn create_parser_nondet_pda_instance() -> crate::parser_nondet_pda::ParserNonDetPDA {
+    crate::parser_nondet_pda::ParserNonDetPDA::new(
+        crate::parser_nondet_pda::ParserNonDetPDAStates::Idle, 
+        ParserCtx {
+            segments: std::collections::BinaryHeap::new(),
+            index: 0,
+    })
+}
 
 pub fn parser_pda_test() {
     use crate::parser_pda::{LittleParser, LittleParserTrait, LittleParserStates::*, LittleParserSignals::*,
