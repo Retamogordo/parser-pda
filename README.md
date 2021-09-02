@@ -1,6 +1,6 @@
 # parser-pda
 
- This crate provides a demo of using [fi_night] crate for implementation 
+ This crate provides a demo of using [fi_night](https://github.com/Retamogordo/fi-night) crate for implementation 
  of a simple parser capable of indexing nested bracketed segments of text.
  The parser distinguishes sentences separated by '.' and ```[bracketed]``` text 
  segments.
