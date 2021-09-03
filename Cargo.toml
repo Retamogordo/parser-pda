@@ -1,6 +1,6 @@
 [package]
 name = "parser-pda"
-version = "0.1.5"
+version = "0.1.6"
 authors = ["Yury <yury.yukhananov@tutanota.com>"]
 edition = "2018"
 description = "Example of a simple parser pushdown automaton implementation"
